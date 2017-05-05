@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hpe.dataArchive.Dao.DataBaseDao">
+    <!-- 目的：为dao接口方法提供sql语句配置 -->
+    <select id="queryAll" resultType="DataBase" parameterType="String">
+        <!-- 具体的sql -->
+        select COLUMN_NAME from information_schema.COLUMNS where table_name =#{TableName}
+    </select>
+</mapper>

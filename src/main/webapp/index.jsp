@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row clearfix">
         <div class="col-md-12 column">
-            <form role="form" class="form-inline">
+            <form role="form" class="form-inline" action="dataBase/find.do" method="post">
                 <div class="form-group">
                     <label for="databaseName">Please enter the database name</label><input type="email"
                                                                                            class="form-control"
