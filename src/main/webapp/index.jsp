@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <html>
 <head>
 <meta charset="utf-8">
@@ -16,11 +16,11 @@
 					method="post">
 					<div class="form-group">
 						<label for="databaseName">Please enter the database name</label> <input
-							type="text" class="form-control" id="databaseName" />
+							type="text" class="form-control" name="databaseName" />
 					</div>
 					<div class="form-group">
 						<label for="tableName">Please enter the tableName</label> <input
-							type="text" class="form-control" id="tableName" />
+							type="text" class="form-control" name="tableName" />
 
 					</div>
 					<button type="submit" class="btn btn-default">Submit</button>
@@ -28,5 +28,7 @@
 			</div>
 		</div>
 	</div>
+	
+
 </body>
 </html>
