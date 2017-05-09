@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.hpe.dataArchive.Dao.DataBaseDao">
     <!-- 目的：为dao接口方法提供sql语句配置 -->
-    <select id="queryAll" resultType="DataBase" parameterType="String">
+    <select id="queryAll" resultType="List" parameterType="com.hpe.dataArchive.entity.DtaBase">
         <!-- 具体的sql -->
         select COLUMN_NAME from information_schema.COLUMNS where table_name =#{TableName}
     </select>

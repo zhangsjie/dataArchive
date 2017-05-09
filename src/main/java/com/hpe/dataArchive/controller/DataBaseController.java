@@ -1,5 +1,8 @@
 package com.hpe.dataArchive.controller;
 
+import java.io.IOException;
+import java.util.Date;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
@@ -19,16 +22,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("dataBase")
 public class DataBaseController {
 
-	/*@RequestMapping(value = "/find.do", method = RequestMethod.POST)
-	public String searchDataBase(HttpServletRequest req, HttpServletResponse res) {
+	@RequestMapping(value = "/find.do", method = RequestMethod.POST)
+	public void searchDataBase(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		String databaseName=req.getParameter("databaseName");
 		String tableName=req.getParameter("tableName");
-		System.out.println(databaseName+"  "+tableName);
-		return "indexdataBase";
-	}*/
-	@RequestMapping(value = "/find.do", method = RequestMethod.POST)
+		String date=req.getParameter("date");
+		System.out.println(databaseName+"  "+tableName+"时间"+date);
+		//res.sendRedirect("success.jsp");
+	}
+	/*@RequestMapping(value = "/find.do", method = RequestMethod.POST)
 	public String searchDataBase(@RequestParam("databaseName") String databaseName, @RequestParam("tableName") String tableName) {
 		System.out.println(databaseName+"  "+tableName);
 		return "indexdataBase";
-	}
+	}*/
 }

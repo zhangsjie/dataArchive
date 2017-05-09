@@ -21,14 +21,17 @@
 					<div class="form-group">
 						<label for="tableName">Please enter the tableName</label> <input
 							type="text" class="form-control" name="tableName" />
-
+					</div>
+					<div class="form-group">
+						<label for="date">Please enter the data</label> <input type="date"
+							class="form-control" name="date" />
 					</div>
 					<button type="submit" class="btn btn-default">Submit</button>
 				</form>
 			</div>
 		</div>
 	</div>
-	
+
 
 </body>
 </html>
