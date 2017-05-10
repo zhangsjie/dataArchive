@@ -23,16 +23,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DataBaseController {
 
 	@RequestMapping(value = "/find.do", method = RequestMethod.POST)
-	public void searchDataBase(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	public String searchDataBase(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		String databaseName=req.getParameter("databaseName");
 		String tableName=req.getParameter("tableName");
 		String date=req.getParameter("date");
 		System.out.println(databaseName+"  "+tableName+"时间"+date);
-		//res.sendRedirect("success.jsp");
+		
+		return "success";
+		
 	}
-	/*@RequestMapping(value = "/find.do", method = RequestMethod.POST)
-	public String searchDataBase(@RequestParam("databaseName") String databaseName, @RequestParam("tableName") String tableName) {
-		System.out.println(databaseName+"  "+tableName);
-		return "indexdataBase";
-	}*/
+	
 }
